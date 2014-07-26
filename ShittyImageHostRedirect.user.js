@@ -56,6 +56,7 @@
 // @include        *://imgmega.com/*/*
 // @include        *://1be.biz/s.php?*
 // @include        *://08lkk.com/*/*
+// @include        *://imgpaying.com/*/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -340,6 +341,10 @@ if(true && UrlContains("08lkk.com"))
 	InputRedirect();
 	imageHasClass('centred');
 	imageHasClass('centred_resized');
+}
+if(true && UrlContains("imgpaying.com"))
+{
+	imageHasClass('pic');
 }
 // } End
 // =========================================================================
