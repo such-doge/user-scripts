@@ -50,6 +50,8 @@
 // @include        *://www.imgflare.com/*/*
 // @include        *://picexposed.com/*/*
 // @include        *://imgseeds.com/image/*
+// @include        *://imgserve.net/*
+// @include        *://pic.re/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -296,6 +298,20 @@ if(true && UrlContains("imgseeds.com"))
 {
 	imageHasId('img1');
 }
+
+if(true && UrlContains("imgserve.net"))
+{
+	imageHasClass('centred');
+}
+
+// =========================================================================
+
+if(true && UrlContains("pic.re"))
+{
+	FormRedirect();
+	imageHasClass('pic');
+}
+
 // =========================================================================
 
 if(true && UrlContains("www.imagesnake.org"))
@@ -343,4 +359,10 @@ function UrlContains(urlfragment)
 {
 	return document.URL.indexOf(urlfragment) != -1;
 }
-
+function FormRedirect()
+{
+	continueForm = document.getElementsByTagName('form')[0];
+	if(continueForm != null) {
+		continueForm.submit();
+	}
+}
