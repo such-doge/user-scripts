@@ -55,6 +55,7 @@
 // @include        *://imgcandy.net/*
 // @include        *://imgmega.com/*/*
 // @include        *://1be.biz/s.php?*
+// @include        *://08lkk.com/*/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -325,13 +326,18 @@ if(true && UrlContains("pic.re"))
 
 if(true && UrlContains("imgcandy.net"))
 {
-	//FormRedirect();                  //No idea why this works on pic.re but not here.
+	InputRedirect();
 	imageHasClass('centred');
 }
 if(true && UrlContains("imgmega.com"))
 {
 	FormRedirect();
 	imageHasClass('pic');
+}
+if(true && UrlContains("08lkk.com"))
+{
+	InputRedirect();
+	imageHasClass('centred');
 }
 // } End
 // =========================================================================
@@ -388,6 +394,13 @@ function FormRedirect()
 	continueForm = document.getElementsByTagName('form')[0];
 	if(continueForm != null) {
 		continueForm.submit();
+	}
+}
+function InputRedirect()
+{
+	continueButton = document.getElementsByTagName('input')[0];
+	if(continueButton != null) {
+		continueButton.click();
 	}
 }
 // } End
