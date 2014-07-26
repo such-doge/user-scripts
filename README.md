@@ -30,7 +30,7 @@ These are all the image hosts that are handled. I strongly recommend that you ne
 - fastpics.net
 - imgnip.com
 - tinypic.com
-- www.imagefap.com
+- imagefap.com
 - imageshimage.com
 - imagevenue.com
 - imgfun.biz
@@ -68,6 +68,6 @@ These hosts are also included but disabled by default for obvious reasons. To en
 
 - rule34.paheal.net
 - g.e-hentai.org
-- www.quickmeme.com
-- www.quickmeme.com
+- quickmeme.com
+- quickmeme.com
 - deviantart.com
