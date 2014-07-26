@@ -63,7 +63,7 @@
 // @include        *://www.linkbucks.com/*/url/*
 // @include        *://www.imglemon.com/*
 // @include        *://imgtube.net/*
-// @include 
+// @include        *://www.imgblow.com/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -384,6 +384,12 @@ if(true && UrlContains("imgtube.net"))
 		continueForm.submit();
 	}
 	imageHasId('image');
+}
+if(true && UrlContains("www.imgblow.com"))
+{
+	InputRedirect();
+	imageHasClass('centred');
+	imageHasClass('centred_resized');
 }
 // } End
 // =========================================================================
