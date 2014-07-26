@@ -57,6 +57,9 @@
 // @include        *://1be.biz/s.php?*
 // @include        *://08lkk.com/*/*
 // @include        *://imgpaying.com/*/*
+// @include        *://imgtab.net/v/i/*
+// @include        *://www.imgbabes.com/*/*
+// @include        *://img.yt/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -345,6 +348,20 @@ if(true && UrlContains("08lkk.com"))
 if(true && UrlContains("imgpaying.com"))
 {
 	imageHasClass('pic');
+}
+if(true && UrlContains("imgtab.net"))
+{
+	imageHasId('main_image')
+}
+if(true && UrlContains("www.imgbabes.com"))
+{
+	imageHasClass('pic');
+}
+if(true && UrlContains("img.yt"))
+{
+	InputRedirect();
+	imageHasClass('centred');
+	imageHasClass('centred_resized');
 }
 // } End
 // =========================================================================
