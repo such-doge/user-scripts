@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name           Imagehost Redirect
-// @namespace      http://greasyfork.org/users/2240-doodles
-// @author         Doodles, such-doge
+// @namespace      https://github.com/such-doge/user-scripts
+// @author         Doodles (https://greasyfork.org/users/2240-doodles), forked by such-doge
 // @version        4.1
-// @description    Redirects Imagehost Pages to the hosted Image
+// @description    Redirects ad-filled pages on shitty image hosts to the desired image.
 // @icon           http://i.imgur.com/eLGmXwE.png
 // @icon64         http://i.imgur.com/EkKNXD8.png
 // @include        *://rule34.paheal.net/post/view/*
@@ -64,6 +64,7 @@
 // @include        *://www.imglemon.com/*
 // @include        *://imgtube.net/*
 // @include        *://www.imgblow.com/*
+// @include        *://img-zone.com/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -373,7 +374,10 @@ if(true && UrlContains("img.yt"))
 }
 if(true && UrlContains("www.imglemon.com"))
 {
-	InputRedirect();
+	continueButton = document.getElementsByClass('cti-submit-loading')[0];
+	if(continueButton != null) {
+		continueButton.click();
+	}
 	imageHasClass('centred');
 	imageHasClass('centred_resized');
 }
@@ -391,6 +395,13 @@ if(true && UrlContains("www.imgblow.com"))
 	imageHasClass('centred');
 	imageHasClass('centred_resized');
 }
+if(true && UrlContains("img-zone.com"))
+{
+	InputRedirect();
+	imageHasClass('centred');
+	imageHasClass('centred_resized');
+}
+
 // } End
 // =========================================================================
 
