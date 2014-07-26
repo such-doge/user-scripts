@@ -52,6 +52,8 @@
 // @include        *://imgseeds.com/image/*
 // @include        *://imgserve.net/*
 // @include        *://pic.re/*
+// @include        *://imgcandy.net/*
+// @include        *://imgmega.com/*/*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -284,6 +286,9 @@ if(true && UrlContains("www.imglooks.com"))
 	window.location.assign(document.URL.replace("viewer.php?file=", "images/"));
 }
 
+// =========================================================================
+// Added by doge
+
 if(true && UrlContains("www.imgflare.com"))
 {
 	imageHasId('this_image');
@@ -304,14 +309,22 @@ if(true && UrlContains("imgserve.net"))
 	imageHasClass('centred');
 }
 
-// =========================================================================
-
 if(true && UrlContains("pic.re"))
 {
 	FormRedirect();
 	imageHasClass('pic');
 }
 
+if(true && UrlContains("imgcandy.net"))
+{
+	//FormRedirect();                  //No idea why this works on pic.re but not here.
+	imageHasClass('centred');
+}
+if(true && UrlContains("imgmega.com"))
+{
+	FormRedirect();
+	imageHasClass('pic');
+}
 // =========================================================================
 
 if(true && UrlContains("www.imagesnake.org"))
