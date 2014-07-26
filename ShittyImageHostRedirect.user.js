@@ -60,6 +60,10 @@
 // @include        *://imgtab.net/v/i/*
 // @include        *://www.imgbabes.com/*/*
 // @include        *://img.yt/*
+// @include        *://www.linkbucks.com/*/url/*
+// @include        *://www.imglemon.com/*
+// @include        *://imgtube.net/*
+// @include 
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -103,6 +107,10 @@ if(true && UrlContains("adf.ly"))
 if(true && UrlContains("1be.biz"))
 {
 	window.location.assign(document.URL.split("s.php?")[1]);
+}
+if(true && UrlContains("www.linkbucks.com"))
+{
+	window.location.assign(document.URL.split("/url/")[1]);
 }
 // } End
 
@@ -362,6 +370,20 @@ if(true && UrlContains("img.yt"))
 	InputRedirect();
 	imageHasClass('centred');
 	imageHasClass('centred_resized');
+}
+if(true && UrlContains("www.imglemon.com"))
+{
+	InputRedirect();
+	imageHasClass('centred');
+	imageHasClass('centred_resized');
+}
+if(true && UrlContains("imgtube.net"))
+{
+	continueForm = document.getElementsByTagName('form')[0];
+	if(continueForm != null && continueForm.target != '_blank') { // Checks to make sure it isn't the download link on the second page.
+		continueForm.submit();
+	}
+	imageHasId('image');
 }
 // } End
 // =========================================================================
