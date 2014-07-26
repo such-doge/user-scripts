@@ -54,6 +54,7 @@
 // @include        *://pic.re/*
 // @include        *://imgcandy.net/*
 // @include        *://imgmega.com/*/*
+// @include        *://1be.biz/s.php?*
 // @grant          none
 // @updateVersion  4
 // @run-at         document-end
@@ -92,6 +93,13 @@ if(true && UrlContains("adf.ly"))
 {
 	window.location.assign(document.URL.split("/banner/")[1]);
 }
+
+// Added by doge {
+if(true && UrlContains("1be.biz"))
+{
+	window.location.assign(document.URL.split("s.php?")[1]);
+}
+// } End
 
 // =========================================================================
 
@@ -287,7 +295,7 @@ if(true && UrlContains("www.imglooks.com"))
 }
 
 // =========================================================================
-// Added by doge
+// Added by doge {
 
 if(true && UrlContains("www.imgflare.com"))
 {
@@ -325,6 +333,7 @@ if(true && UrlContains("imgmega.com"))
 	FormRedirect();
 	imageHasClass('pic');
 }
+// } End
 // =========================================================================
 
 if(true && UrlContains("www.imagesnake.org"))
@@ -372,6 +381,8 @@ function UrlContains(urlfragment)
 {
 	return document.URL.indexOf(urlfragment) != -1;
 }
+
+// Added by doge {
 function FormRedirect()
 {
 	continueForm = document.getElementsByTagName('form')[0];
@@ -379,3 +390,4 @@ function FormRedirect()
 		continueForm.submit();
 	}
 }
+// } End
