@@ -328,6 +328,7 @@ if(true && UrlContains("imgcandy.net"))
 {
 	InputRedirect();
 	imageHasClass('centred');
+	imageHasClass('centred_resized');
 }
 if(true && UrlContains("imgmega.com"))
 {
@@ -338,6 +339,7 @@ if(true && UrlContains("08lkk.com"))
 {
 	InputRedirect();
 	imageHasClass('centred');
+	imageHasClass('centred_resized');
 }
 // } End
 // =========================================================================
