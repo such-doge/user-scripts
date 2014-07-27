@@ -1,15 +1,13 @@
 // ==UserScript==
 // @id             Amazon URL Cleaner
 // @name           Amazon URL Cleaner
-// @author         azu (https://greasyfork.org/users/124-azu), forked by doge
-// @namespace      https://github.com/such-doge/user-scripts/
-// @description    Shortens Amazon links in the Location bar. This version adds amazon.co.jp
+// @namespace      http://efcl.info/
+// @description    replaceState for Amazon
 // @include        http://www.amazon.*/dp/*
 // @include        http://www.amazon.*/*gp/product/*
 // @include        http://www.amazon.*/exec/obidos/ASIN/*
 // @include        http://www.amazon.*/o/ASIN/*
-// @run-at         document-end
-// @version        0.0.2.2014-07-26
+// @version 0.0.1.20140518104255
 // ==/UserScript==
 (function(doc) {
     // ASIN.0 in kindle store
