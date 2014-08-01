@@ -1,6 +1,6 @@
 # user-scripts
 
-Repository of useful Greasemonkey user scripts.
+Repository of useful Greasemonkey user scripts, some with my own improvements. Copyrights belong to their respective owners.
 
 ### Shitty Image Host Redirect
 
