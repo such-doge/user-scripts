@@ -17,7 +17,7 @@
 var tags = document.getElementsByTagName('img');
 
 for (var i = 0; i < tags.length; i++) {
-	if (tags[i].src < 0) {
+	if (tags[i].src.indexOf("imgur.com") < 0) {
 		continue;
 	} else {
 		tags[i].src = tags[i].src.replace('imgur.com', 'filmot.org');
