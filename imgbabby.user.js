@@ -821,7 +821,13 @@ function toHex() {
 }
 
 function Decode(a, b, c) {
-	decrypted_cookie = "denial=" + toHex(slowAES.decrypt(c, 2, a, b)) + "; max-age=" + 60 * 60 * 24 * 1 + "; path=/";
+	site = window.location.href;
+	if (site.match(/imgbabes/)) {
+		var variable_name = "denial=";
+	} else {
+		var variable_name = "verifid=";
+	}
+	decrypted_cookie = variable_name + toHex(slowAES.decrypt(c, 2, a, b)) + "; max-age=" + 60 * 60 * 24 * 1 + "; path=/";
 	console.log("Cookie plus decrypted key is: " + decrypted_cookie);
 	document.cookie = decrypted_cookie;
 }
@@ -838,6 +844,7 @@ function getImage() {
 
 function isGateway(url) {
 	var re_pic = /(?:jpg|png|gif)\.html$/;
+	console.log("regex is ");
 	if (re_pic.test(url)) {
       console.log("Is a gateway.");
 		return true;
