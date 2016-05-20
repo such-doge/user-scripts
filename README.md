@@ -2,6 +2,10 @@
 
 Repository of useful Greasemonkey user scripts, some with my own improvements. Copyrights belong to their respective owners.
 
+### ImgBabby
+
+There's a special place in hell for image hosts who encrypt the access token for the image. At least with this script, you won't line their pockets with advertising dollars. Imgbabes and Imgflare are automatically forwarded to the image you want to see.
+
 ### Shitty Image Host Redirect
 
 Imagine one day you're looking for porn to download, and you find yourself looking at the provided sample pics to decide whether it's worth your bandwidth. But there's a catch: the scumbag uploader only used hosts that have affiliate revenue schemes and hide their images behind a landing page covered in ads, pop-ups, pop-unders, pop-sideways, pop-insides, and probably some drive-by scripts too. While this script doesn't hide any ads or block scripts, what it does do is redirect you to image file you desire automatically. No bullshit, just images. Adfly banners, linkbucks and 1be.biz links are also handled. NoScript is recommended in conjunction with this.
