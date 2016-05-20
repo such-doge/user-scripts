@@ -9,7 +9,7 @@
 // @icon           http://i.imgur.com/HRkC29b.png
 // @icon64         http://i.imgur.com/wG4rTur.png
 // @include        *://www.imgbabes.com/*
-// @include        *://wwww.imgflare.com/*
+// @include        *://www.imgflare.com/*
 // @grant          none
 // @updateVersion  1
 // @run-at         document-end
@@ -839,8 +839,10 @@ function getImage() {
 function isGateway(url) {
 	var re_pic = /(?:jpg|png|gif)\.html$/;
 	if (re_pic.test(url)) {
+      console.log("Is a gateway.");
 		return true;
 	} else {
+      console.log("Is not a gateway.");
 		return false;
 	}
 }
@@ -862,7 +864,16 @@ function getciphertext(rawHTML) {
 
 console.log("Shitty image host detected!");
 
-if (isGateway(window.location.href)) {
+
+if (getImage()) {
+	console.log("This is an image page. Getting direct URL.");
+	var imagetag = getImage();
+	var url = imagetag.src;
+	console.log("Redirecting.")
+	window.location = url;
+}
+
+else if (isGateway(window.location.href)) {
 	console.log("This page is a gateway. Retrieving script contents...");
 	var scriptags = document.getElementsByTagName('script');
 	for (var i = 0, len = scriptags.length; i < len; i++) {
@@ -894,12 +905,6 @@ if (isGateway(window.location.href)) {
 	var goto_location = window.location.href + "?attempt=1";
 	console.log("Redirecting to image page.");
 	window.location = goto_location;
-} else if (getImage()) {
-	console.log("This is an image page. Getting direct URL.");
-	var imagetag = getImage();
-	var url = imagetag.src;
-	console.log("Redirecting.")
-	window.location = url;
 } else {
 	console.log("This is neither a gateway page nor an image page.");
 }
